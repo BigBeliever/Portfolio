@@ -1,0 +1,639 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  background-color: rgb(10, 13, 17);
+  color: antiquewhite;
+  /* border: red solid 1px; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(10, 13, 17);
+}
+
+.header_container{
+  width: 100%;
+}
+
+.nav {
+  margin-top: 1rem;
+  display: flex;
+  width: 98vw;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(10, 13, 17);
+}
+
+/* @media (max-width: 512px) {
+  .nav {
+    display: none;
+  }
+} */
+/* .mobile-nav{
+  display: none;
+}
+@media (max-width: 512px) {
+  .mobile-nav {
+    display: block;
+  }
+} */
+
+.mobile-nav a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  display: block;
+  /* This ensures the entire link area is clickable */
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.mobile-nav{
+  display: none;
+}
+@media screen and (max-width: 512px) {
+  .nav {
+    display: none;
+  }
+
+  .menuIcon {
+    width: 50%;
+    margin-right: 20px;
+  }
+
+  .mobile-nav {
+    margin: 2rem 0 0 2rem;
+    display: flex;
+    width: 90%;
+    position: sticky;
+  }
+
+  .mobile-nav__menu {
+    display: none;
+    /* position: absolute; */
+    top: 100%;
+    left: 0;
+    transform: translateX(-100%); /* Move the menu to the far left initially */
+    transition: transform 3s ease-in; /* Add transition property for transform */
+  }
+  .menuIcon:hover + .mobile-nav__menu,
+  .mobile-nav__menu:hover {
+    display: block;
+    width: 40vw;
+    /* border-radius: 100px; */
+  
+    /* height: auto; */
+    transform: translateX(0); /* Move the menu to the center with transition */
+  }
+
+  .mobile-nav__menu li {
+    display: block;
+    /* Show list items by default */
+  }
+
+  .mobile-nav__menu li {
+    display: none;
+  }
+
+  .menuIcon:hover + .mobile-nav__menu li,
+  .mobile-nav__menu:hover li {
+    list-style:decimal;
+
+    display: block;
+    /* Show list items when hovering over the icon or menu */
+  }
+
+
+}
+
+/* @media (max-width: 768px) {
+  nav {
+    margin-top: 0rem;
+    width: 100vw;
+  }
+}
+@media ( max-width: 425px) {
+  nav{
+    margin-left: 0;
+    width: fit-content;
+  }
+} */
+
+.nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.nav li {
+  display: inline-block;
+  margin-right: 10px;
+  /* Add some spacing between the list items if needed */
+  margin-top: 15px;
+  transition: transform 300ms ease;
+}
+
+.nav li:hover {
+  transform: translateY(-5px);
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  display: block;
+  /* This ensures the entire link area is clickable */
+  font-size: 1.3rem;
+  font-weight: bolder;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.nav-vertical-line {
+  border-left: 2px solid rgb(46, 60, 255);
+  height: 32px;
+  /* Adjust the height as needed */
+  border-radius: 200px;
+  transform: translateY(7px);
+}
+
+li button {
+  /* height:  2.1rem; */
+  border: 0;
+  /* width: 6rem; */
+  width: max-content;
+  padding: 0.6rem 1rem;
+  margin-left: 2rem;
+  /* margin: 0 2rem; */
+  /* transform: translateY(4px) translateX(30px); */
+  background-color: rgb(23, 23, 136);
+  font-family: "Times New Roman", Times, serif;
+  border-radius: 10px;
+  color: aliceblue;
+  box-shadow: 0px 2px 9px royalblue;
+  transition: transform 600ms ease;
+  /* Add a smooth transition for the transform property */
+  cursor: pointer
+}
+
+li button:hover {
+  transform: translateY(-6px);
+}
+
+
+
+/* hero section start */
+
+.hero__img-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 370px;
+}
+
+.ring1 {
+  width: 311px;
+  /* Adjust the size of the ring as needed */
+  height: 311px;
+  border-radius: 50%;
+  background-color: rgb(18, 18, 77);
+  /* Set the background color to white */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ring {
+  width: 307px;
+  /* Adjust the size of the ring as needed */
+  height: 307px;
+  border-radius: 50%;
+  /* background-color: rgb(10, 13, 17);  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ring3 {
+  background-color: (66, 90, 168);
+}
+
+/* hero starts here  */
+
+.hero__img {
+  border-radius: 50%;
+  display: block;
+  width: 285px;
+  height: 285px;
+}
+
+.hero__subtitle {
+  color: antiquewhite;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__title {
+  display: flex;
+  justify-content: center;
+  color: rgb(66, 90, 168);
+  font-size: 45px;
+}
+
+.underline1 {
+
+  width: 4.5rem;
+  height: 0.1rem;
+  background-color: #26243f;
+}
+
+.underline {
+  display: flex;
+  justify-content: center;
+  margin: 3px 0 9px 0;
+}
+
+.hero__description {
+  display: flex;
+  justify-content: center;
+  color: rgb(93, 96, 110);
+  text-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .hero__description {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 0rem;
+    /* width: 80vw; */
+    text-wrap: wrap;
+  }
+}
+
+@media (max-width: 425px) {
+  .hero__description {
+    margin: 1rem 1rem;
+  }
+}
+
+
+.holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */
+  margin: 0;
+}
+
+.hero_btn {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  border: none;
+}
+
+.hero__btn_btn {
+  width: 5.7rem;
+  height: 2.7rem;
+  border: none;
+  background-color: rgb(23, 23, 136);
+  font-family: Verdana, sans-serif;
+  border-radius: 10px;
+  color: aliceblue;
+  box-shadow: 0px 2px 9px royalblue;
+  transition: transform 600ms ease;
+  text-decoration: none;
+  padding: none;
+  margin: 0 0 2rem 0;
+  /* background-color: transparent; */
+}
+
+#hero__btn_btn {
+  padding: 0;
+  text-decoration: none;
+  color: aliceblue;
+  background-color: rgb(23, 23, 136);
+}
+
+.hero__btn_btn:hover {
+  transform: translateY(-6px);
+}
+
+/* About section */
+
+.about-container-section {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__me {
+  width: 70%;
+  justify-content: center;
+  text-align: center;
+  transform: translateX(0);
+  transition: transform 2s ease-in-out;
+}
+
+
+.about__title {
+  color: rgb(66, 90, 168);
+  font-size: 2.4rem;
+  /* width:40%; */
+  cursor: default;
+}
+
+
+.about__description {
+  color: #89888b;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding: 6px;
+  font-size: larger;
+  word-spacing: 4px;
+  font-weight: bolder;
+  cursor: default;
+}
+
+@media (max-width: 425px) {
+  .about__description {
+    padding: 0;
+    /* text-align: left; */
+    /* margin-left: 10px; */
+    font-weight: normal;
+    word-spacing: 2px;
+  }
+}
+
+.about__subtitle {
+  color: rgb(66, 90, 168);
+  font-size: 1.9rem;
+  margin-top: 2rem;
+  cursor: default;
+
+}
+
+.about__skill-container {
+  display: flex;
+  /* text-align: center; */
+  justify-content: center;
+  cursor: default;
+}
+
+.about__skills {
+  margin: 1rem 3rem;
+
+}
+
+.about__skill {
+  text-align: left;
+  color: #89888b;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding: 6px;
+  font-size: larger;
+  word-spacing: 4px;
+  font-weight: bolder;
+  list-style-type: square;
+}
+
+/* projects  */
+
+.container {
+  cursor: default;
+
+}
+
+.project__title {
+  margin-top: 2rem;
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: center;
+  color: rgb(66, 90, 168);
+  /* font-size: 45px; */
+
+}
+
+.projects {
+  text-align: center;
+  justify-content: center;
+  margin: 6rem 3rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project__img-holder {
+  flex: 1;
+  border: 1px solid rgb(63, 63, 175);
+  ;
+  padding: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .project__img-holder {
+    flex: 100%;
+    /* Take up 100% of the available width on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  #projects {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 768px) {
+  #project__img-holder {
+    margin-top: 2rem;
+  }
+
+  /* z-index:2; */
+}
+
+
+.project__sample {
+  width: 50vw;
+  transform: translateX(1rem) translateY(-1rem);
+}
+
+@media (max-width: 768px) {
+  .project__sample {
+    width: 80vw
+  }
+}
+
+.project__content {
+  flex: 2;
+  text-align: left;
+  margin-left: 2rem;
+}
+
+@media (max-width: 768px) {
+  .project__content {
+    margin-top: 2rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .project__content {
+    margin-left: 0;
+  }
+}
+
+.project__featured {
+  color: rgb(66, 90, 168);
+  margin: 0 0 1rem 0;
+}
+
+.project__description {
+  /* display: flex; */
+  /* justify-content: center; */
+  color: rgb(93, 96, 110);
+  text-wrap: wrap;
+}
+
+.status {
+  color: rgb(64, 66, 76);
+  font-size: small;
+}
+
+.project__technologies {
+  display: flex;
+
+  gap: 1rem;
+}
+
+.project__technology {
+  display: flex;
+  text-wrap: none;
+  font-size: 13px;
+  color: rgb(64, 66, 76);
+}
+
+/* 
+.project__links{
+
+  color: #fd0000;
+} */
+.project__link {
+  text-decoration: none;
+  font-size: 13px;
+  /* font-family:'Courier New', Courier, monospace; */
+  font-weight: bolder;
+}
+
+.project_link {
+  color: #26243f;
+}
+
+.project_btn_container {
+  /* width: 100vw; */
+  display: flex;
+  justify-content: center;
+}
+
+.btn_project__btn {
+  font-family: Verdana, sans-serif;
+  align-items: center;
+  border: 0;
+  width: max-content;
+  padding: 0.6rem 1rem;
+  /* margin-left: 2rem; */
+  background-color: rgb(23, 23, 136);
+
+  border-radius: 10px;
+  color: aliceblue;
+  box-shadow: 0px 2px 9px royalblue;
+  transition: transform 600ms ease;
+  /* Add a smooth transition for the transform property */
+  cursor: pointer
+}
+
+.btn_project__btn:hover {
+  transform: translateY(-6px);
+}
+
+
+
+/* Contact Section Starts */
+
+.container_contact_section {
+  margin: 4rem;
+  display: block;
+  text-align: center;
+}
+
+.contact__title {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  color: rgb(66, 90, 168);
+  /* padding: 1rem; */
+  cursor: default;
+}
+
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+
+.my-link {
+  transition: 600ms ease;
+}
+
+.my-link:hover {
+  transform: translateY(-10px);
+}
+
+.f-underline {
+
+  display: flex;
+  justify-content: center;
+  margin: 3px 0 9px 0;
+
+}
+
+.f-underline1 {
+
+  width: 90vw;
+  height: 0.1rem;
+  background-color: #26243f;
+}
+
+#backToTopBtn {
+  display: none;
+  position:fixed;
+  bottom: 1px;
+  right: -10px;
+  /* width: 50%; */
+  background-color: transparent;
+  /* color: #fff; */
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#backToTopBtn:hover {
+  background-color:transparent;
+  border: none;
+}
+
+/* Show the button when the user scrolls down 20px */
+body.scrolled #backToTopBtn {
+  display: block;
+}
